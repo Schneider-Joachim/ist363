@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  background-color: #e38e49;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0a3981;
+}
+
+.page {
+  background-color: #d4ebf8;
+  width: 900px;
+  max-width: 92%;
+  margin: 30px auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+}
+
+.header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 48px;
+}
+
+.name {
+  position: relative;
+  top: -120px;
+  text-align: center;
+  margin-top: 60px;
+  animation:
+    slideDown 0.9s ease forwards,
+    flip 0.8s ease forwards,
+    pulse 1s ease-in-out infinite;
+  animation-delay: 0s, 1s, 1.9s;
+}
+
+@keyframes slideDown {
+  to {
+    top: 0;
+  }
+}
+
+@keyframes flip {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: rotateY(180deg) scale(1);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.15);
+  }
+}
+
+.card {
+  margin-top: 18px;
+}
+
+.about {
+  margin: 18px 0 0 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.photo {
+  margin: 0;
+  width: 48%;
+}
+
+.photo img {
+  width: 100%;
+  height: 220px;
+  display: block;
+  object-fit: cover;
+}
