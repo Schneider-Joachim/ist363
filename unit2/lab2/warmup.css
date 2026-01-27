@@ -16,14 +16,14 @@ body {
 
 .header h1 {
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: 48px;
 }
 
 .name {
   position: relative;
   top: -120px;
-  text-align: center;
+  text-align: left;
   margin-top: 60px;
   animation:
     slideDown 0.9s ease forwards,
@@ -81,4 +81,9 @@ body {
   height: 220px;
   display: block;
   object-fit: cover;
+}
+
+.orange {
+  color: #e38e49;
+  font-weight: 700;
 }

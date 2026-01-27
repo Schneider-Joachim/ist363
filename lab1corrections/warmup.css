@@ -1,8 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #e38e49;
   font-family: Arial, Helvetica, sans-serif;
   color: #0a3981;
+  overflow-x: hidden;
 }
 
 .page {
@@ -16,8 +23,20 @@ body {
 
 .header h1 {
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: 48px;
+}
+
+.name {
+  position: relative;
+  top: -120px;
+  text-align: left;
+  margin-top: 60px;
+  animation:
+    slideDown 0.9s ease forwards,
+    flip 0.8s ease forwards,
+    pulse 1s ease-in-out infinite;
+  animation-delay: 0s, 1s, 1.9s;
 }
 
 .card {
@@ -47,4 +66,27 @@ body {
   height: 220px;
   display: block;
   object-fit: cover;
+}
+
+.orange {
+  color: #e38e49;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .photo {
+    width: 100%;
+  }
+
+  .photo img {
+    height: 200px;
+  }
 }
