@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Global */
+body {
+  font-family: Arial, sans-serif;
+  background: #e4fdc3;
+  color: #1a1a1a;
+}
+
+/* Header */
+.site-header {
+  background: #e89b6a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+.site-header nav {
+  margin-top: 8px;
+}
+.site-header nav a {
+  margin: 0 8px;
+  font-size: 14px;
+  transition: transform 0.25s ease;
+}
+.site-header nav a:hover {
+  transform: scale(1.05);
+}
+
+/* Layout */
+.page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Sections */
+.section-title {
+  color: #e2625c;
+  margin-bottom: 12px;
+}
+
+/* Grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.recipe-grid .recipe-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  text-align: center;
+}
+.recipe-grid .recipe-card img {
+  border-radius: 12px;
+}
+.recipe-grid .recipe-card p {
+  margin-top: 8px;
+  color: #e2625c;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #e4fdc3;
+  padding: 30px;
+  text-align: center;
+  margin: 20px 0;
+}
+.newsletter form {
+  margin-top: 12px;
+}
+.newsletter form input {
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+.newsletter form button {
+  background: #e89b6a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: transform 0.25s ease;
+}
+.newsletter form button:hover {
+  transform: scale(1.05);
+}
+.newsletter form img {
+  width: 80px;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+/* Hero */
+.hero {
+  margin: 20px 0;
+}
+.hero img {
+  border-radius: 12px;
+}
+
+/* About */
+.about {
+  text-align: center;
+  padding: 30px;
+}
+.about a {
+  background: #e2625c;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: transform 0.25s ease;
+}
+.about a:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.site-footer {
+  background: #8ae2c8;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+.site-footer nav {
+  margin-top: 8px;
+}
+.site-footer nav a {
+  margin: 0 6px;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */

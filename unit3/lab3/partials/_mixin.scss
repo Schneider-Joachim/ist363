@@ -1,0 +1,22 @@
+@use "variables" as v;
+
+@mixin card {
+  background: v.$white;
+  border-radius: v.$radius;
+  box-shadow: v.$shadow;
+  padding: 12px;
+}
+
+@mixin hoverGrow($scale: 1.05) {
+  transition: transform 0.25s ease;
+
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

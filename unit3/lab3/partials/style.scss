@@ -1,0 +1,154 @@
+// @use "partials/variables" as v;
+// @use "partials/mixin" as m;
+// @use "partials/reset";
+
+@use "variables" as v;
+@use "mixin" as m;
+@use "reset";
+
+/* Global */
+
+body {
+  font-family: v.$font;
+  background: v.$lime;
+  color: v.$text;
+}
+
+/* Header */
+
+.site-header {
+  background: v.$orange;
+  color: v.$white;
+  text-align: center;
+  padding: 20px;
+
+  nav {
+    margin-top: 8px;
+
+    a {
+      margin: 0 8px;
+      font-size: 14px;
+
+      @include m.hoverGrow;
+    }
+  }
+}
+
+/* Layout */
+
+.page {
+  max-width: v.$max-width;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Sections */
+
+.section-title {
+  color: v.$melon;
+  margin-bottom: 12px;
+}
+
+/* Grid */
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  .recipe-card {
+    @include m.card;
+    text-align: center;
+
+    img {
+      border-radius: v.$radius;
+    }
+
+    p {
+      margin-top: 8px;
+      color: v.$melon;
+    }
+  }
+}
+
+/* Newsletter */
+
+.newsletter {
+  background: v.$lime;
+  padding: 30px;
+  text-align: center;
+  margin: 20px 0;
+
+  form {
+    margin-top: 12px;
+
+    input {
+      padding: 8px;
+      border-radius: v.$radius;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: v.$orange;
+      color: v.$white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: v.$radius;
+
+      @include m.hoverGrow;
+    }
+
+    img {
+      width: 80px; // adjust if needed
+      height: auto; // keeps proportions
+      margin: 0 auto 10px;
+      display: block;
+    }
+  }
+}
+
+/* Hero */
+
+.hero {
+  margin: 20px 0;
+
+  img {
+    border-radius: v.$radius;
+  }
+}
+
+/* About */
+
+.about {
+  text-align: center;
+  padding: 30px;
+
+  a {
+    background: v.$melon;
+    color: v.$white;
+    padding: 10px 16px;
+    border-radius: v.$radius;
+    display: inline-block;
+    margin-top: 10px;
+
+    @include m.hoverGrow;
+  }
+}
+
+/* Footer */
+
+.site-footer {
+  background: v.$mint;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+
+  nav {
+    margin-top: 8px;
+
+    a {
+      margin: 0 6px;
+      font-size: 13px;
+    }
+  }
+}
