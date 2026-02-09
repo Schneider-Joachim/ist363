@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orange News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900">
+    <!-- TOP NAV -->
+    <header class="bg-indigo-900">
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4"
+      >
+        <h1 class="text-xl font-bold text-orange-400">Orange News</h1>
+
+        <nav class="hidden items-center gap-6 text-sm text-gray-200 md:flex">
+          <a class="hover:text-white" href="#">Home</a>
+          <a class="hover:text-white" href="#">Latest</a>
+          <a class="hover:text-white" href="#">Scores</a>
+          <a class="hover:text-white" href="#">Videos</a>
+          <a class="hover:text-white" href="#">More</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE WRAP -->
+    <main class="mx-auto max-w-6xl px-4 py-6">
+      <!-- HERO -->
+      <section class="overflow-hidden rounded-xl border bg-white shadow-sm">
+        <div class="relative h-56 sm:h-72 md:h-80">
+          <!-- Replace with your hero image -->
+          <img
+            src="images/hero.jpg"
+            alt="Campus"
+            class="h-full w-full object-cover"
+          />
+
+          <!-- Bottom overlay like screenshot -->
+          <div
+            class="absolute inset-x-0 bottom-0 bg-gray-800/90 px-5 py-4 text-white"
+          >
+            <h2 class="text-lg font-bold sm:text-xl">
+              Will the Snow Ever Thaw?
+            </h2>
+            <p class="mt-1 text-sm text-gray-200">
+              Get the latest scoop on the weather and everything that affects
+              the jet stream.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED STORIES -->
+      <section class="mt-6">
+        <h3 class="mb-3 text-sm font-bold text-gray-800">
+          More Featured Stories
+        </h3>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <!-- Card 1 -->
+          <article class="overflow-hidden rounded-xl border bg-white shadow-sm">
+            <img
+              src="images/feature1.jpg"
+              alt="Graduation"
+              class="h-36 w-full object-cover"
+            />
+            <div class="p-4">
+              <h4 class="font-bold">Graduation 2025</h4>
+              <p class="mt-1 text-sm text-gray-600">
+                Invite your friends and family to join us in May.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="overflow-hidden rounded-xl border bg-white shadow-sm">
+            <img
+              src="images/feature2.jpg"
+              alt="Workplace Run"
+              class="h-36 w-full object-cover"
+            />
+            <div class="p-4">
+              <h4 class="font-bold">Workplace Run</h4>
+              <p class="mt-1 text-sm text-gray-600">
+                Run a 5k with your colleagues.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="overflow-hidden rounded-xl border bg-white shadow-sm">
+            <img
+              src="images/feature3.jpg"
+              alt="Art Show"
+              class="h-36 w-full object-cover"
+            />
+            <div class="p-4">
+              <h4 class="font-bold">Art Show</h4>
+              <p class="mt-1 text-sm text-gray-600">
+                The best art of the year on display at Schaffer.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- HEADLINES + SCORES -->
+      <section class="mt-6 grid gap-6 md:grid-cols-12">
+        <!-- Top Headlines -->
+        <div class="md:col-span-7">
+          <h3 class="mb-3 text-sm font-bold text-gray-800">Top Headlines</h3>
+
+          <div class="space-y-3">
+            <article
+              class="rounded-xl border bg-white p-4 shadow-sm hover:shadow"
+            >
+              <h4 class="font-bold">Player X Breaks Record</h4>
+              <p class="mt-1 text-sm text-gray-600">
+                The record-breaking performance from Player X stunned fans
+                everywhere...
+              </p>
+            </article>
+
+            <article
+              class="rounded-xl border bg-white p-4 shadow-sm hover:shadow"
+            >
+              <h4 class="font-bold">Team Y Wins Championship</h4>
+              <p class="mt-1 text-sm text-gray-600">
+                In an epic showdown, Team Y came out on top with a historic
+                victory...
+              </p>
+            </article>
+
+            <article
+              class="rounded-xl border bg-white p-4 shadow-sm hover:shadow"
+            >
+              <h4 class="font-bold">Athlete Z Announces Retirement</h4>
+              <p class="mt-1 text-sm text-gray-600">
+                Athlete Z’s retirement shocked the sports world...
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Game Scores -->
+        <aside class="md:col-span-5">
+          <h3 class="mb-3 text-sm font-bold text-gray-800">Game Scores</h3>
+
+          <div class="rounded-xl border bg-white shadow-sm">
+            <div class="grid grid-cols-3 border-b px-4 py-3 text-xs font-bold">
+              <span class="col-span-2 text-gray-700">Game</span>
+              <span class="text-right text-gray-700">Score</span>
+            </div>
+
+            <div class="divide-y text-sm">
+              <div class="grid grid-cols-3 px-4 py-3">
+                <span class="col-span-2 text-gray-700"
+                  >Women’s Hockey vs Miami</span
+                >
+                <span class="text-right font-semibold text-gray-900"
+                  >3 - 1</span
+                >
+              </div>
+
+              <div class="grid grid-cols-3 px-4 py-3">
+                <span class="col-span-2 text-gray-700"
+                  >Men’s Lacrosse vs St Bonaventure</span
+                >
+                <span class="text-right font-semibold text-gray-900"
+                  >7 - 18</span
+                >
+              </div>
+
+              <div class="grid grid-cols-3 px-4 py-3">
+                <span class="col-span-2 text-gray-700"
+                  >Men’s Basketball vs Duke</span
+                >
+                <span class="text-right font-semibold text-gray-900"
+                  >98 - 75</span
+                >
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- NEWSLETTER (dark gray bar at bottom) -->
+      <section class="mt-8">
+        <div class="rounded-xl bg-gray-800 px-6 py-6 text-white">
+          <h3 class="text-lg font-bold">Subscribe to Our Newsletter</h3>
+          <p class="mt-1 text-sm text-gray-200">
+            Stay updated with the latest news, scores, and exclusive content
+            delivered straight to your inbox!
+          </p>
+
+          <form class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full rounded-md px-3 py-2 text-sm text-gray-900 placeholder:text-gray-400 sm:flex-1"
+            />
+            <button
+              type="submit"
+              class="rounded-md bg-yellow-400 px-6 py-2 text-sm font-bold text-gray-900 hover:bg-yellow-300"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
