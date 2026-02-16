@@ -114,6 +114,13 @@ body {
   opacity: 0.9;
 }
 
+.newsletter img {
+  width: 120px; /* control size */
+  height: auto; /* keep proportions */
+  display: block;
+  margin: 0 auto 12px auto;
+}
+
 /* ---------- HERO ---------- */
 .hero img {
   width: 100%;
