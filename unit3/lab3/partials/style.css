@@ -1,0 +1,223 @@
+/* ---------- Base / Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  background: #ffffff; /* page should NOT be lime green */
+  color: #111827;
+}
+
+/* Page container */
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Section titles */
+.section-title {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: #111827; /* dark header */
+  color: #ffffff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 16px;
+}
+
+.site-header nav a {
+  color: #e5e7eb; /* lighter links */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-header nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ---------- Recipe Grid ---------- */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.recipe-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-card p {
+  margin: 0;
+  padding: 10px 12px;
+  font-weight: 700;
+}
+
+/* ---------- Newsletter (ONLY place with lime green) ---------- */
+.newsletter {
+  margin: 24px 0;
+  background: #b7ff4a; /* lime green only here */
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.newsletter h3 {
+  margin: 0 0 12px;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #111827;
+}
+
+.newsletter button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Hero + About ---------- */
+.hero img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 24px 0;
+}
+
+.about {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.about a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #111827;
+  color: #ffffff; /* fix footer text color */
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #e5e7eb;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 16px;
+}
+
+.site-footer nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ---------- Mobile: stack columns + full width images ---------- */
+@media (max-width: 768px) {
+  .site-header,
+  .site-footer {
+    flex-direction: column; /* fix: switches to columns on mobile */
+    align-items: flex-start;
+  }
+
+  .site-header nav,
+  .site-footer nav {
+    flex-wrap: wrap;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr; /* images/cards full width */
+  }
+
+  .recipe-card img {
+    height: 220px; /* taller like example */
+  }
+
+  .newsletter form {
+    flex-direction: column; /* input then button */
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
