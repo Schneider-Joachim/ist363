@@ -1,18 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JScript</title>
+    <title>Lab 07</title>
   </head>
+
   <body>
     <script>
-      for (let i = 1; i <= 10; i++) {
-        if (i % 2 === 0) {
-          console.log(i);
-        }
+      // #1 Logging Text and Variables
+      let favNumber = 5;
+      console.log("My favorite number is " + favNumber + ".");
+
+      // #2 Working with Arrays
+      let favoriteFoods = ["pizza", "sushi", "chicken", "pasta"];
+
+      // print the second item
+      console.log(favoriteFoods[1]);
+
+      // add a new food
+      favoriteFoods.push("tacos");
+
+      // print updated array
+      console.log(favoriteFoods);
+
+      // #3 Looping thru an Array
+      for (let i = 0; i < favoriteFoods.length; i++) {
+        console.log("Favorite Food " + (i + 1) + ": " + favoriteFoods[i]);
       }
+
+      // #4 Filtering an Array (exclude second item)
+      for (let i = 0; i < favoriteFoods.length; i++) {
+        if (i === 1) {
+          continue;
+        }
+
+        console.log("Favorite Food " + (i + 1) + ": " + favoriteFoods[i]);
+      }
+
+      // #5 Creating and Using Objects
+      let book = {
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald",
+        yearPublished: 1925,
+        isAvailable: true,
+      };
+
+      console.log(book.title + " by " + book.author);
+
+      if (book.isAvailable) {
+        console.log("This book is available for checkout.");
+      } else {
+        console.log("Sorry, this book is currently checked out.");
+      }
+
+      // #6 While Loops (even numbers up to 20)
+      let x = 2;
+
+      while (x <= 20) {
+        console.log(x);
+        x = x + 2;
+      }
+
+      // #7 Random Number (rolling a 6-sided die)
+      let diceRoll = Math.floor(Math.random() * 6) + 1;
+
+      console.log("You rolled: " + diceRoll);
     </script>
-    <button onclick="alert('Even numbers printed to console')">Click Me</button>
   </body>
 </html>
