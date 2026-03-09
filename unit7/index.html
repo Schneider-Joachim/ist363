@@ -1,18 +1,27 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JScript</title>
-  </head>
+<html>
   <body>
+    <h2>Dog Years Calculator</h2>
+
+    <form>
+      Enter human years:
+      <input type="number" name="years" />
+      <button type="button" class="calc">Calculate</button>
+    </form>
+
+    <p>Dog years: <span class="result"></span></p>
+
     <script>
-      for (let i = 1; i <= 10; i++) {
-        if (i % 2 === 0) {
-          console.log(i);
-        }
-      }
+      let button = document.querySelector(".calc");
+      let input = document.querySelector("input");
+      let result = document.querySelector(".result");
+
+      button.addEventListener("click", function () {
+        let humanYears = input.value;
+        let dogYears = humanYears * 7;
+
+        result.innerText = dogYears;
+      });
     </script>
-    <button onclick="alert('Even numbers printed to console')">Click Me</button>
   </body>
 </html>
