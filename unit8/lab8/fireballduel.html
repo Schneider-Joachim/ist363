@@ -55,7 +55,6 @@
       #fireballright {
         rotate: 180deg;
         position: absolute;
-        rotate: 180deg;
         left: 500px;
         top: 150px;
         transition: all 2s ease-in-out;
@@ -94,6 +93,15 @@
         animation: moveRight 1s ease-in-out;
       }
       @keyframes moveRight {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(140px);
+        }
+        100% {
+          transform: translateX(0);
+        }
       }
     </style>
   </head>
@@ -120,16 +128,45 @@
     </div>
 
     <script>
+      let monsterShield = 100;
+      let girlShield = 100;
+
+      const throwButton = document.querySelector("#playbutton button");
+      throwButton.addEventListener("click", playGame);
+
       function animateFireball() {
-        // Remove the class to reset animation
         document.getElementById("fireballleft").classList.remove("animate");
         document.getElementById("fireballright").classList.remove("animate");
 
-        // Use a small timeout to allow the browser to register the removal
         setTimeout(() => {
           document.getElementById("fireballleft").classList.add("animate");
           document.getElementById("fireballright").classList.add("animate");
-        }, 10); // Small delay ensures re-triggering
+        }, 10);
+      }
+
+      function playGame() {
+        animateFireball();
+
+        const monsterPower = Math.floor(Math.random() * 20) + 1;
+        const girlPower = Math.floor(Math.random() * 20) + 1;
+
+        monsterShield = monsterShield - girlPower;
+        girlShield = girlShield - monsterPower;
+
+        document.getElementById("mscore").innerText = monsterShield;
+        document.getElementById("gscore").innerText = girlShield;
+
+        if (monsterShield <= 0 && girlShield <= 0) {
+          endGame("Both lost!");
+        } else if (monsterShield <= 0) {
+          endGame("Monster lost! Girl won!");
+        } else if (girlShield <= 0) {
+          endGame("Girl lost! Monster won!");
+        }
+      }
+
+      function endGame(message) {
+        document.getElementById("playbutton").innerHTML = "<p>" + message + "</p>";
       }
     </script>
   </body>
