@@ -17,6 +17,8 @@ function generateStars() {
     const star = document.createElement("div");
     star.className = "star";
     const size = Math.random() * 2.5 + 0.5;
+    // ~30% of stars get a purple tint
+    const isPurple = Math.random() < 0.3;
     star.style.cssText = `
       width: ${size}px;
       height: ${size}px;
@@ -25,6 +27,7 @@ function generateStars() {
       --d: ${(Math.random() * 4 + 2).toFixed(1)}s;
       --delay: -${(Math.random() * 6).toFixed(1)}s;
       --bright: ${(Math.random() * 0.5 + 0.4).toFixed(2)};
+      background: ${isPurple ? "#c4b5fd" : "white"};
     `;
     field.appendChild(star);
   }
