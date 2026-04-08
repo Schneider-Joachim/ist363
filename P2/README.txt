@@ -1,0 +1,4 @@
+NASA API:
+nFRxLotPbsEI2xeJ1hz819xnqt4ROSVTSzLP0koZ
+
+SOLAR SYS API: 8c0fdcfb-f0f3-487e-a3e6-e1430dbacc3e

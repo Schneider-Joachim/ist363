@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astronomy Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="star-field" id="starField"></div>
+
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">✦</span>
+          <h1>Astronomy Explorer</h1>
+        </div>
+        <nav>
+          <a href="#apod">Picture of the Day</a>
+          <a href="#search">Image Search</a>
+          <a href="#wiki">Space Facts</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- API 1: NASA APOD -->
+      <section id="apod">
+        <div class="section-label">API 1 · NASA APOD</div>
+        <h2>Astronomy Picture of the Day</h2>
+        <div id="apod-container">
+          <div class="loader">
+            <div class="spinner"></div>
+            <p>Contacting NASA…</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- API 1 (continued): NASA Image Search -->
+      <section id="search">
+        <div class="section-label">API 1 · NASA Image Library</div>
+        <h2>Search NASA Images</h2>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Try: nebula, mars, black hole…"
+            autocomplete="off"
+          />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div id="imageResults">
+          <p class="hint">Results will appear here.</p>
+        </div>
+      </section>
+
+      <!-- API 2: Wikipedia -->
+      <section id="wiki">
+        <div class="section-label">API 2 · Wikipedia</div>
+        <h2>Space Knowledge Base</h2>
+        <div class="wiki-topics">
+          <button class="topic-btn active" data-topic="Universe">
+            Universe
+          </button>
+          <button class="topic-btn" data-topic="Black hole">Black Hole</button>
+          <button class="topic-btn" data-topic="Milky Way">Milky Way</button>
+          <button class="topic-btn" data-topic="James Webb Space Telescope">
+            James Webb
+          </button>
+          <button class="topic-btn" data-topic="Mars">Mars</button>
+        </div>
+        <div id="wikiResults">
+          <div class="loader">
+            <div class="spinner"></div>
+            <p>Loading Wikipedia data…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Schneider Joachim &nbsp;·&nbsp; IST 363 Project 2 &nbsp;·&nbsp; NASA API
+        &amp; Wikipedia API
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
