@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #04050a;
+    color: #f0f2ff;
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; }
+}
+
+/* Star field background */
+.starfield {
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(240,242,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, rgba(240,242,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40% 8%, rgba(240,242,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 30%, rgba(240,242,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 55%, rgba(240,242,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 20%, rgba(240,242,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 70%, rgba(240,242,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 80%, rgba(240,242,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 85%, rgba(240,242,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 78% 90%, rgba(240,242,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 33% 65%, rgba(240,242,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 48% 50%, rgba(240,242,255,0.3) 0%, transparent 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #080b14; }
+::-webkit-scrollbar-thumb { background: #242d45; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4fc3f7; }
+
+/* Image loading shimmer */
+.shimmer {
+  background: linear-gradient(90deg, #0e1220 25%, #161c2e 50%, #0e1220 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Progress bar transition */
+.progress-bar { transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
